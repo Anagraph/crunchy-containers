@@ -26,7 +26,7 @@ RUN rpm --import RPM-GPG-KEY-crunchydata*
 RUN ${PACKAGER} -y install \
 		--setopt=skip_missing_names_on_install=False \
 		--disablerepo=crunchypg* \
-		--enablerepo="crunchypg${PG_LBL}" \
+		--enablerepo="crunchydatadevpg${PG_LBL}" \
 		postgresql${PG_LBL} \
 	&& ${PACKAGER} -y clean all
 
